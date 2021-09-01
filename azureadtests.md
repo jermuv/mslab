@@ -17,9 +17,23 @@ Labconfig for hanhivaara
 ```
 $LabConfig=@{ DomainAdminName='LabAdmin'; AdminPassword='LS1setup!'; Prefix = 'HANHIVAARA-' ; DomainNetbiosName="HANHIVAARA";DomainName="Corp.HANHIVAARA.com" SwitchName = 'LabSwitch'; DCEdition='3' ; Internet=$false ;AdditionalNetworksConfig=@(); VMs=@()}
 
-$LabConfig.VMs += @{ VMName = 'tools'     ; Configuration = 'Simple'; ParentVHD = 'Win2019_G2.vhdx'     ; MemoryStartupBytes= 512MB }
-$LabConfig.VMs += @{ VMName = 'aadconnect'     ; Configuration = 'Simple'; ParentVHD = 'Win2019_G2.vhdx'     ; MemoryStartupBytes= 4096MB }
+$LabConfig.VMs += @{ VMName = 'tools'     ; Configuration = 'Simple'; ParentVHD = 'Win2019_G2.vhdx'     ; MemoryStartupBytes= 2048MB ;AdditionalNetworks = $False; MGMTNICs = 1 }
+$LabConfig.VMs += @{ VMName = 'aadconnect'     ; Configuration = 'Simple'; ParentVHD = 'Win2019_G2.vhdx'     ; MemoryStartupBytes= 4096MB ;AdditionalNetworks = $False; MGMTNICs = 1 }
 ```
+
+
+add stuff for the tools machine
+```
+
+```
+
+add stuff for the aadconnect machine
+```
+
+```
+
+
+
 
 
 Download MSU packages: https://www.catalog.update.microsoft.com/Search.aspx?q=KB5004870

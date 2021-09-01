@@ -11,3 +11,5 @@ $LabConfig.VMs += @{ VMName = 'Win2016Full'     ; Configuration = 'Simple'; Pare
 $LabConfig.VMs += @{ VMName = 'Win2019Core'     ; Configuration = 'Simple'; ParentVHD = 'Win2019Core_G2.vhdx' ; MemoryStartupBytes= 512MB }
 $LabConfig.VMs += @{ VMName = 'Win2019Full'     ; Configuration = 'Simple'; ParentVHD = 'Win2019_G2.vhdx'     ; MemoryStartupBytes= 512MB }
 ```
+
+

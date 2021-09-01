@@ -6,16 +6,16 @@ Quick azure ad tests
 Labconfig for ankkalinna
 
 ```
-$LabConfig=@{ DomainAdminName='LabAdmin'; AdminPassword='LS1setup!'; Prefix = 'WSLab-'; SwitchName = 'LabSwitch'; DCEdition='4' ; Internet=$false ;AdditionalNetworksConfig=@(); VMs=@()}
+$LabConfig=@{ DomainAdminName='LabAdmin'; AdminPassword='LS1setup!'; Prefix = 'ANKKALINNA-' ; DomainNetbiosName="ANKKALINNA";DomainName="Corp.ANKKALINNA.com"; SwitchName = 'LabSwitch'; DCEdition='3' ; Internet=$true ;AdditionalNetworksConfig=@(); VMs=@()}
 
-$LabConfig.VMs += @{ VMName = 'tools'     ; Configuration = 'Simple'; ParentVHD = 'Win2019_G2.vhdx'     ; MemoryStartupBytes= 512MB }
-$LabConfig.VMs += @{ VMName = 'aadconnect'     ; Configuration = 'Simple'; ParentVHD = 'Win2019_G2.vhdx'     ; MemoryStartupBytes= 4096MB }
+$LabConfig.VMs += @{ VMName = 'tools'     ; Configuration = 'Simple'; ParentVHD = 'Win2019_G2.vhdx'     ; MemoryStartupBytes= 2048MB ;AdditionalNetworks = $False; MGMTNICs = 1 }
+$LabConfig.VMs += @{ VMName = 'aadconnect'     ; Configuration = 'Simple'; ParentVHD = 'Win2019_G2.vhdx'     ; MemoryStartupBytes= 4096MB ;AdditionalNetworks = $False; MGMTNICs = 1 }
 ```
 
 Labconfig for hanhivaara
 
 ```
-$LabConfig=@{ DomainAdminName='LabAdmin'; AdminPassword='LS1setup!'; Prefix = 'WSLab-'; SwitchName = 'LabSwitch'; DCEdition='4' ; Internet=$false ;AdditionalNetworksConfig=@(); VMs=@()}
+$LabConfig=@{ DomainAdminName='LabAdmin'; AdminPassword='LS1setup!'; Prefix = 'HANHIVAARA-' ; DomainNetbiosName="HANHIVAARA";DomainName="Corp.HANHIVAARA.com" SwitchName = 'LabSwitch'; DCEdition='3' ; Internet=$false ;AdditionalNetworksConfig=@(); VMs=@()}
 
 $LabConfig.VMs += @{ VMName = 'tools'     ; Configuration = 'Simple'; ParentVHD = 'Win2019_G2.vhdx'     ; MemoryStartupBytes= 512MB }
 $LabConfig.VMs += @{ VMName = 'aadconnect'     ; Configuration = 'Simple'; ParentVHD = 'Win2019_G2.vhdx'     ; MemoryStartupBytes= 4096MB }

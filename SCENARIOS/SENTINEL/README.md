@@ -5,7 +5,7 @@ Labconfig for sentinel lab
 ```
 # Domain controller
 
-$LabConfig=@{ DomainAdminName='LabAdmin'; AdminPassword='LS1setup!'; Prefix = 'SENTINEL-' ; DomainNetbiosName="ATA";DomainName="Corp.ATA.com"; SwitchName = 'LabSwitch'; DCEdition='4' ; Internet=$true ;AdditionalNetworksConfig=@(); MemoryStartupBytes= 2GB; VMs=@()}
+$LabConfig=@{ DomainAdminName='LabAdmin'; AdminPassword='LS1setup!'; Prefix = 'SENTINEL-' ; DomainNetbiosName="SENTINEL";DomainName="Corp.SENTINEL.com"; SwitchName = 'LabSwitch'; DCEdition='4' ; Internet=$true ;AdditionalNetworksConfig=@(); MemoryStartupBytes= 2GB; VMs=@()}
 
 # DCEdition = 4 for DataCenter or 3 for DataCenterCore
 

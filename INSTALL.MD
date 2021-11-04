@@ -19,6 +19,12 @@ Other stuff:
 -> install powershell core 7.15
 -> download and install git (git-scm.com)
 -> fonts and stuff?
+-->>
 --->> scot hanselman
 ------> https://www.hanselman.com/blog/my-ultimate-powershell-prompt-with-oh-my-posh-and-the-windows-terminal
 https://www.hanselman.com/blog/how-to-make-a-pretty-prompt-in-windows-terminal-with-powerline-nerd-fonts-cascadia-code-wsl-and-ohmyposh
+
+-> install onenote windows 10 edition from microsoft store
+
+-->> loppusilauksena: muista laittaa family membereille login oikeudet työasemaan
+--> kirjaudu oliviana sisään ja laita pinni

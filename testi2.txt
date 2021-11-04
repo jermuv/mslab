@@ -1,2 +1,5 @@
 
 Install windows 11 from media
+-> setup for personal use
+-> use security key to add microsoft account
+-> create a pin

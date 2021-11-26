@@ -4,14 +4,17 @@ Labconfig for CA lab
 
 Tää vähän syö muistia, ainakin konfiguraation perusteella
 
-| HOST | MEMORY |
-| --- | --- |
-| DC | 2GB |
-| CA | 4GB |
-| IIS | 3GB |
-| WAC | 4GB |
-| FILES | 3GB |
-| *WKS* | **Ei vielä konfiguroitu** |
+| HOST | MEMORY | ROLE |
+| --- | --- | --- |
+| DC | 2GB | SERVER |
+| CA | 4GB | SERVER |
+| IIS | 3GB | SERVER |
+| WAC | 4GB | SERVER |
+| FILES | 3GB | SERVER
+| *WKS* | **Ei vielä konfiguroitu** | WORKSTATION |
+
+Palvelimet: 16GB
+Työasema(t): 8GB
 
 ```
 $LabConfig=@{ DomainAdminName='LabAdmin'; AdminPassword='LS1setup!'; Prefix = 'ca-' ;DomainNetbiosName="corp";DomainName="corp.ca.local"; DCEdition='4'; Internet=$true ; AdditionalNetworksConfig=@(); VMs=@()}

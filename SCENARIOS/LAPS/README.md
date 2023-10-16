@@ -15,3 +15,7 @@ $LabConfig.VMs += @{ VMName = 'wks10'     ; Configuration = 'Simple'; ParentVHD 
 $LabConfig.VMs += @{ VMName = 'wks11'     ; Configuration = 'Simple'; ParentVHD = 'Win1122H1_G2.vhdx'     ; MemoryStartupBytes= 4GB ;AdditionalNetworks = $False; MGMTNICs = 1 }
 $LabConfig.VMs += @{ VMName = 'srv22'     ; Configuration = 'Simple'; ParentVHD = 'Win2022_G2.vhdx'     ; MemoryStartupBytes= 4GB ;AdditionalNetworks = $False; MGMTNICs = 1 }
 ```
+
+## Priority tasks
+
+- Patch all operating systems

@@ -28,6 +28,12 @@ If you try to run *"2_createparentdisks.ps1"* without running *"1_prereq.ps1"* f
 
 1. 1_prereq.ps1
    - there will be downloaded necessary DSC modules
+   - note, there will be missing module *PSDesiredStateConfiguration*
+     - Run following command to get it installed:
+```     
+Install-Module -Name PSDesiredStateConfiguration -Repository PSGallery -MaximumVersion 2.99
+```
+
 2. Under *ParentDisks* folder, there are now few additional powershell scripts
    - execute *CreateParentDisks.ps1*
      - Provide .iso image + .msu files (if you have any)

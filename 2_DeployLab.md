@@ -1,6 +1,6 @@
 # Assumptions
 
-- there is mslab prereqs run earlier (see [DiskHydration](DiskHydration.md))
+- there is mslab prereqs run earlier (see [DiskHydration](1_DiskHydration.md))
 - there is some "scenario" file available (see [LabScenarios](SCENARIOS/LabScenarios.md))
 
 Note: this mslab works even with ASR rules set on!

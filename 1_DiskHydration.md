@@ -27,12 +27,12 @@ Mode                LastWriteTime         Length Name
 -a---        13/11/2024     22.20     6142558208 Win2022Core_G2.vhdx
 ```
 
-# Building "parent disk"
+# Building a "parent disk"
 
 - unzip mslab.zip
-  - c:\mslabs\lab1 for example
+  - C:\MSLABS\lab1 for example
 
-It is important to keep folder structure the same!
+It is important to keep folder structure the same if/when running the lab via mslab!
 
 ```
 Get-ChildItem | Select-Object -Property Name, Length

@@ -1,9 +1,41 @@
 # Assumptions
 
-- there is no mslab installed
-- there is no prebuild hydraded disks yet
+- There is no mslab installed
+- There is no prebuild hydraded disks yet
 
-Note: this mslab works even with ASR rules set on!
+## Note
+
+- MSLAB works even with ASR rules set on!
+- **IF** there is already hydraded disks, this step is unnecessary!
+  - you can find hydraded disks based filename
+    - OS version
+    - G1 or G2 = BIOS / UEFI
+    - **vhdx extension**
+
+```
+Get-ChildItem | Select-Object -Property Name, Length
+
+Name                     Length
+----                     ------
+Win1020H1_G2.vhdx    8130658304
+Win2022_G2.vhdx     10186915840
+Win2022Core_G2.vhdx  6142558208
+```
+
+Search recursive
+
+```
+Get-ChildItem -Recurse | ? { $_.name -match ".vhdx" } | ? { $_.name -match "_G2." } | ? { $_.name -match "win" }
+
+        Directory: C:\mslabs\ParentDisks
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a---        14/11/2024      0.13     8130658304 󰋊  Win1020H1_G2.vhdx
+-a---        13/11/2024     22.04    10186915840 󰋊  Win2022_G2.vhdx
+-a---        13/11/2024     22.20     6142558208 󰋊  Win2022Core_G2.vhdx
+```
 
 # Building "parent disk"
 

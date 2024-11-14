@@ -3,6 +3,8 @@
 - there is no mslab installed
 - there is no prebuild hydraded disks yet
 
+Note: this mslab works even with ASR rules set on!
+
 # Building "parent disk"
 
 - unzip mslab.zip

@@ -7,15 +7,14 @@ Tää vähän syö muistia, ainakin konfiguraation perusteella
 | HOST | MEMORY | ROLE |
 | --- | --- | --- |
 | DC | 2GB | SERVER |
-| CA | 4GB | SERVER |
+| SUBCA | 4GB | SERVER |
+| ROOTCA | 4GB | (MEMBER) SERVER |
 | IIS | 3GB | SERVER |
-| WAC | 4GB | SERVER |
-| FILES | 3GB | SERVER
 | *WKS* | 8GB | WORKSTATION |
 
-- Palvelimet: 16GB
+- Palvelimet: 13GB
 - Työasema(t): 8GB
-- Total: 24GB
+- Total: 21GB
 
 ```
 $LabConfig=@{ DomainAdminName='LabAdmin'; AdminPassword='LS1setup!'; Prefix = 'ca-' ;DomainNetbiosName="corp";DomainName="corp.ca.local"; DCEdition='4'; Internet=$true ; AdditionalNetworksConfig=@(); VMs=@()}

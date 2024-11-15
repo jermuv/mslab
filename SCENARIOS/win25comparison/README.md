@@ -1,6 +1,7 @@
 # Lab setup
 
 | HOST | ROLE |
+| --- | --- |
 | DC | Domain Controller |
 | Win22 | Windows Server 2022 Desktop Edition |
 | Win22Core | Windows Server 2022 Core Edition |

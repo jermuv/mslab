@@ -148,6 +148,30 @@ Do this on both mditools and dc machines
 
 ## Enable auditing and other important things
 
+**Powershell**
+
+```
+import-module defenderforidentity
+
+# This example sets all configurations for the domain, creating the GPOs and linking them.
+Set-MDIConfiguration -Mode Domain -Configuration All -Identity svcMDIService
+
+# With this example, linking does not occur
+# Set-MDIConfiguration -Mode Domain -Configuration All -GpoNamePrefix 'CONTOSO' -SkipGpoLink
+-Identity svcMDIService
+```
+
+- **Note 1** - remote SAM gpo linking is not done anyway!
+- **Note 2** - firewall NNR exception 
+
+## Delegate accessrights for the action account
+
+- [Link for the references](https://learn.microsoft.com/en-us/defender-for-identity/deploy/manage-action-accounts)
+
+Permissions to give (ALL Descendant User objects)
+- pwdlastset read / write
+- useraccountcontrol read / write
+
 ## Deleted objects container
 
 To verify deleted objects container, following scripts can be used:
@@ -159,6 +183,10 @@ $delObjContainer.nTSecurityDescriptor.Access
 
 ```
 
+## Configurations on Defender for Identity side
+
+- Configure MDI to use the newly created service account
+- Configure MDI to use the newly created action account
 
 # Links for the resources
 
